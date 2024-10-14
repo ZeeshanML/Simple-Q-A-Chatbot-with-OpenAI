@@ -21,6 +21,7 @@ prompt = ChatPromptTemplate.from_messages(
     ]
 )
 
+# Function to generate response
 def generate_response(question, openai_api_key, model, temperature, max_tokens):
     model = ChatOpenAI(model_name=model, temperature=temperature, max_tokens=max_tokens, openai_api_key=openai_api_key)
     output_parser = StrOutputParser()
@@ -52,4 +53,3 @@ if st.button("Get Answer"):
         st.write(answer)
     else:
         st.write("Please enter your OpenAI API Key")
-
