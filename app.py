@@ -29,6 +29,7 @@ def generate_response(question, openai_api_key, model, temperature, max_tokens):
     answer = chain.invoke({'question': question})
     return answer
 
+# Title
 st.title("Simple Q&A Chatbot with OpenAI")
 
 # Sidebar
